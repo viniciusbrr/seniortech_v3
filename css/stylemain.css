@@ -1,0 +1,291 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --primary: #0b2245;
+    --secondary: #122d5a;
+    --accent: #27c6c3;
+    --background: #f5f7f5;
+    --text: #1f2937;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    background: var(--background);
+    color: var(--text);
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background:
+        linear-gradient(
+            90deg,
+            #051a38,
+            #082b56,
+            #051a38
+        );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 4rem;
+    max-height: 100px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   HERO VIDEO
+========================= */
+
+.hero-video {
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero-video video {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero-text h1 {
+    color: var(--primary);
+
+    font-size: 46px;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    flex: 1;
+}
+
+/* =========================
+   MODULES
+========================= */
+
+.modules {
+    max-width: 1200px;
+    margin: 3rem auto;
+
+    padding: 0 1rem;
+}
+
+.modules h2 {
+    text-align: center;
+
+    color: var(--primary);
+
+    font-size: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+.modules-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(500px, 1fr));
+
+    gap: 1.5rem;
+}
+
+/* =========================
+   MODULE CARD
+========================= */
+
+.module {
+    background: white;
+
+    padding: 1.5rem;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.module:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+}
+
+.module summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: var(--primary);
+
+    margin-bottom: 1rem;
+}
+
+.module p {
+    color: #555;
+
+    margin-bottom: 1rem;
+}
+
+.module a {
+    display: inline-block;
+
+    background: var(--accent);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.module a:hover {
+    filter: brightness(0.9);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:
+        linear-gradient(
+            90deg,
+            #051a38,
+            #082b56,
+            #051a38
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1.5rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 1rem;
+
+        padding: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
